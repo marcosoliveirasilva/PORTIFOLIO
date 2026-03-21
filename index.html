@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcos Silva – Desenvolvedor Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════  Navbar  ═══════════════════════════ -->
+  <header class="navbar justify-center md:justify-between">
+    <div class="navbar__logo">
+      <a href="#home">MARCOS</a>
+    </div>
+    <nav class="navbar__links hidden md:flex">
+      <a href="#home">Home</a>
+      <a href="#about">Sobre Mim</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#testimonials">Depoimentos</a>
+      <a href="#contact">Fale Comigo</a>
+    </nav>
+    <a href="#contact" class="btn btn--outline hidden md:flex">Fale Comigo</a>
+  </header>
+
+  <!-- ═══════════════════════════  Home  ════════════════════════════ -->
+  <section class="home grid grid-cols-1 md:grid-cols-2" id="home">
+    <div class="home__content order-2 md:order-1">
+      <p class="home__greeting">Olá!</p>
+      <h1 class="home__name">Me chamo Marcos Silva</h1>
+      <h2 class="home__title">Sou um desenvolvedor web</h2>
+      <p class="home__desc">Desenvolvedor web criativo que oferece soluções inteligentes para os problemas propostos pelo mercado.</p>
+      <a href="#contact" class="btn btn--primary">Fale Comigo</a>
+    </div>
+    <div class="home__image-wrap flex justify-center order-1 md:order-2 md:justify-end ">
+      <img src="images/home-profile.png" alt="Marcos Silva" class="home__image" />
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Sobre Mim  ═══════════════════════════ -->
+  <section class="section about" id="about">
+    <h2 class="section__title">Sobre Mim</h2>
+    <p class="section__subtitle">Saiba mais sobre mim</p>
+
+    <div class="about__inner grid-cols-1 md:grid-cols-2">
+      <div class="about__text">
+        <h3 class="about__name">Meu nome é Marcos.</h3>
+        <p>Sou profissional de tecnologia com mais de dois anos de experiência em programação, focado no desenvolvimento de soluções eficientes e alinhadas às necessidades do negócio. Sou formado em Bacharelado em Sistemas de Informação pelo IFBA (Bahia) e atualmente curso pós-graduação em Desenvolvimento Web, com foco no aprimoramento contínuo de minhas habilidades.</p>
+        <ul class="about__list">
+          <li><span>Nome:</span> Marcos Silva</li>
+          <li><span>Idade:</span> 30</li>
+          <li><span>Grau de formação:</span> Bacharel em Sistemas de Informação</li>
+          <li><span>Idioma:</span> Português / Inglês</li>
+          <li><span>Profissão:</span> Desenvolvedor Web</li>
+          <li><span>Freelance:</span> Diponível</li>
+          <li class="block md:hidden"><span>Esperiência:</span> +2 anos</li>
+          <li class="block md:hidden"><span>Projetos:</span> 8 concluídos</li>
+          <li class="block md:hidden"><span>Empresas:</span> 2</li>
+          <li class="block md:hidden"><span>Publicações:</span> 1</li>
+        </ul>
+        <a href="images/cv.pdf" class="btn btn--primary" download>Download CV</a>
+      </div>
+
+      <div class="about__stats hidden md:grid grid-cols-2 gap-4">
+        <div class="stat">
+          <span class="stat__number">2+</span>
+          <span class="stat__label">Anos de experiência</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">8</span>
+          <span class="stat__label">Projetos completos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">3</span>
+          <span class="stat__label">Empresas</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">1</span>
+          <span class="stat__label">Publicações</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Habilidades  ══════════════════════════ -->
+  <section class="skills">
+    <div class="skills__inner">
+      <h2 class="section__title section__title--light">Minhas Habilidades</h2>
+      <p class="section__subtitle section__subtitle--light">Habilidades de programação</p>
+
+      <div class="skills__grid grid-cols-1 md:grid-cols-2">
+        <div class="skill-col">
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>FASTAPI</span><span>80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>DJANGO</span><span>71%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:71%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>LARAVEL</span><span>75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:75%"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-col">
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>EXPRESS</span><span>60%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:60%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>VUEJS</span><span>72%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item__header">
+              <span>NEXTJS</span><span>50%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-bar__fill" style="--w:50%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Portfolio  ══════════════════════════ -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="section__title section__title--light">Portfólio</h2>
+    <p class="section__subtitle section__subtitle--light">Meus projetos recentes</p>
+
+    <div class="portfolio__grid grid-cols-1 lg:grid-cols-2">
+      <div class="portfolio__col">
+        <div class="portfolio-card">
+          <span class="portfolio-card__year">2024 – 2024</span>
+          <h4>KAWARE</h4>
+          <p>Desenvolvi um projeto utilizando Python, Node.js e Next.js que aplica inteligência artificial para identificar doenças em plantas. A solução analisa imagens ou dados fornecidos pelos usuários e, a partir do diagnóstico, os conecta a fornecedores de insumos adequados, facilitando a tomada de decisão e otimizando o processo de tratamento.</p>
+        </div>
+        <div class="portfolio-card">
+          <span class="portfolio-card__year">2025 – 2025</span>
+          <h4>INTEGRAÇÃO AUTORIZAÇÃO CONVÊNIO</h4>
+          <p>Desenvolvi uma automação para o controle de autorizações, integrando o sistema Tasy às operadoras. A solução foi desenvolvida com Django no backend e Next.js no frontend, proporcionando mais agilidade, padronização e eficiência no fluxo de solicitações e aprovações.</p>
+        </div>
+      </div>
+
+      <div class="portfolio__col">
+        <div class="portfolio-card">
+          <span class="portfolio-card__year">2026 – 2026</span>
+          <h4>AUTOMAÇÃO GERAÇÃO DE NF</h4>
+          <p>Desenvolvi uma automação para geração de notas fiscais de serviço (NFS-e) por meio da integração entre o sistema Tasy e o sistema da Prefeitura de Vitória da Conquista (BA), utilizando Node.js. A solução otimizou o processo de emissão, reduzindo atividades manuais e aumentando a eficiência operacional e a confiabilidade dos dados e serviço prestado.</p>
+        </div>
+        <div class="portfolio-card">
+          <span class="portfolio-card__year">2025 – 2026</span>
+          <h4>AUTOMAÇÃO RECURSO DE GLOSAS</h4>
+          <p>Desenvolvi uma automação para o processo de recurso de glosas hospitalares, integrando arquivos de retorno ao sistema Tasy. A solução foi construída com FastAPI para o processamento dos dados e contou com um sistema visual de monitoramento desenvolvido em Express, proporcionando maior controle, agilidade e transparência ao processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Depoimentos  ════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <h2 class="section__title">Depoimentos</h2>
+    <p class="section__subtitle">O QUE OS CLIENTES DISSERAM</p>
+
+    <div class="testimonials__grid grid-cols-1 lg:grid-cols-3">
+      <div class="testimonial-card">
+        <img src="images/client-1.jpg" alt="Marcelo Santos" class="testimonial-card__avatar" />
+        <h4>Marcelo Santos</h4>
+        <span>Desenvolvedor Web</span>
+        <p>O trabalho desenvolvido trouxe um impacto direto na nossa operação. Antes, tínhamos processos manuais demorados e sujeitos a erros; com as automações implementadas, ganhamos agilidade, organização e muito mais confiabilidade nos dados. Foi uma solução prática para problemas reais do dia a dia.</p>
+        <div class="testimonial-card__stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial-card testimonial-card--active">
+        <img src="images/client-2.jpg" alt="Ricardo Oliveira" class="testimonial-card__avatar" />
+        <h4>Ricardo Oliveira</h4>
+        <span>Desenvolvedor Web</span>
+        <p>A capacidade de entender nossas necessidades e transformar isso em soluções tecnológicas fez toda a diferença. Os sistemas desenvolvidos melhoraram significativamente nosso fluxo de trabalho, reduzindo retrabalho e otimizando o tempo da equipe. Hoje temos mais controle e eficiência nos processos.</p>
+        <div class="testimonial-card__stars">★★★★★</div>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="images/client-3.jpg" alt="Luana Ferraz" class="testimonial-card__avatar" />
+        <h4>Luana Ferraz</h4>
+        <span>Desenvolvedor Web</span>
+        <p>A implementação das integrações e automações resolveu gargalos importantes que enfrentávamos há anos. Além de melhorar o desempenho operacional, as ferramentas trouxeram mais transparência e segurança para as informações, contribuindo diretamente para a tomada de decisões.</p>
+        <div class="testimonial-card__stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Fale Comigo  ═════════════════════════ -->
+  <section class="contact" id="contact">
+    <h2 class="section__title section__title--light block lg:hidden">FALE COMIGO</h2>
+    <p class="section__subtitle section__subtitle--light block lg:hidden">ENTRE EM CONTATO</p>
+
+    <div class="contact__inner grid-cols-1 lg:grid-cols-2">
+      <div class="contact__info order-2 lg:order-1">
+        <h2 class="section__title section__title--light hidden lg:block">FALE COMIGO</h2>
+        <p class="section__subtitle section__subtitle--light hidden lg:block">ENTRE EM CONTATO</p>
+
+        <ul class="contact__list flex-col grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+          <li>
+            <img src="images/phone.svg" alt="telefone"  />
+            <span>+55 77 98810-1010<br>+55 77 98801-0101</span>
+          </li>
+          <li>
+            <img src="images/mail.svg" alt="e-mail"  />
+            <span>email@gmail.com</span>
+          </li>
+          <li>
+            <img src="images/linkedin-2.svg" alt="linkedin"  />
+            <span>https://www.linkedin.com/</span>
+          </li>
+          <li>
+            <img src="images/github.svg" alt="github"  />
+            <span>https://github.com/</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact__form-wrap order-1 lg:order-2">
+        <h3>Envie uma mensagem</h3>
+        <form action="" method="POST" id="formMessage" class="contact__form">
+          <input required type="text" placeholder="Nome" class="form-field" />
+          <input required type="email" placeholder="Email" class="form-field" />
+          <input required type="text" placeholder="Assunto" class="form-field" />
+          <textarea required placeholder="Mensagem" rows="5" class="form-field"></textarea>
+          <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════  Rodape  ══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__social">
+      <img src="images/facebook.svg" alt="facebook"  />
+      <img src="images/twitter.svg" alt="twitter"  />
+      <img src="images/instagram.svg" alt="instagram"  />
+      <img src="images/linkedin.svg" alt="linkedin"  />
+    </div>
+    <p>Produzido por <strong>Marcos SIlva</strong> | Todos os direitos reservados</p>
+  </footer>
+
+</body>
+</html>
