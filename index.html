@@ -237,10 +237,41 @@
       <div class="contact__form-wrap order-1 lg:order-2">
         <h3>Envie uma mensagem</h3>
         <form action="" method="POST" id="formMessage" class="contact__form">
-          <input required type="text" placeholder="Nome" class="form-field" />
-          <input required type="email" placeholder="Email" class="form-field" />
-          <input required type="text" placeholder="Assunto" class="form-field" />
-          <textarea required placeholder="Mensagem" rows="5" class="form-field"></textarea>
+          <fieldset class="item__form">
+            <input required type="text" name="nome" placeholder="Nome" class="form-field" />
+            <span class="erro-message"></span>
+          </fieldset>
+          <fieldset class="item__form">
+            <input 
+              required
+              name="cnpj"
+              type="text" 
+              placeholder="CNPJ" 
+              class="form-field" 
+              minlength="14" maxlength="18" 
+              pattern="^\d{2}\.?\d{3}\.?\d{3}\/?\d{4}-?\d{2}$"
+            />
+            <span class="erro-message"></span>
+          </fieldset>
+          <fieldset class="item__form">
+            <input 
+              required 
+              name="email"
+              type="email" 
+              placeholder="Email" 
+              class="form-field" 
+              minlength="4"
+            />
+            <span class="erro-message"></span>
+          </fieldset>
+          <fieldset class="item__form">
+            <input required type="text" name="assunto" placeholder="Assunto" class="form-field" />
+            <span class="erro-message"></span>
+          </fieldset>
+          <fieldset class="item__form">
+            <textarea required name="mensagem" placeholder="Mensagem" rows="5" class="form-field"></textarea>
+            <span class="erro-message"></span>
+          </fieldset>
           <button type="submit" class="btn btn--primary">Enviar Mensagem</button>
         </form>
       </div>
@@ -258,5 +289,6 @@
     <p>Produzido por <strong>Marcos SIlva</strong> | Todos os direitos reservados</p>
   </footer>
 
+  <script src="./js/scripst.js" type="module"></script>
 </body>
 </html>
