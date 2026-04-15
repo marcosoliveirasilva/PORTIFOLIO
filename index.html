@@ -289,6 +289,23 @@
     <p>Produzido por <strong>Marcos SIlva</strong> | Todos os direitos reservados</p>
   </footer>
 
+  <!-- ═══════════════════════════  Camera  ══════════════════════════ -->
+  <div id="cameraModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+    <div class="bg-white p-4 rounded-lg max-w-md w-full text-center">
+      <h3 class="text-lg font-bold mb-2">Confirmação de identidade</h3>
+      <p class="mb-3 text-sm">Tire uma foto para confirmar que você é uma pessoa</p>
+
+      <video id="video" autoplay class="w-full rounded mb-3"></video>
+      <canvas id="canvas" class="hidden"></canvas>
+
+      <div class="flex gap-2 justify-center">
+        <button id="captureBtn" class="btn btn--primary">Tirar Foto</button>
+        <button id="cancelBtn" class="btn btn--cancel ">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <script src="./js/scripst.js" type="module"></script>
+  <script src="./js/camera.js" type="module"></script>
 </body>
 </html>
