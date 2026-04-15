@@ -9,7 +9,7 @@
   --white:     #ffffff;
   --off-white: #f9f9fb;
   --grey:      #6b7280;
-  --grey-light:#e5e7eb;
+  --grey-light:#a7a8ab;
   --text:      #374151;
 
   --font-display: 'Playfair Display', Georgia, serif;
@@ -65,6 +65,17 @@ ul { list-style: none; }
 .btn--primary:hover {
   background: transparent;
   color: var(--teal);
+  transform: translateY(-2px);
+}
+
+.btn--cancel {
+  color: var(--text);
+  border: 2px solid var(--grey-light);
+}
+.btn--cancel:hover {
+  background: var(--grey-light);
+  color: var(--white);
+  border-color: var(--grey-light);
   transform: translateY(-2px);
 }
 
