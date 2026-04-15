@@ -1,38 +1,50 @@
-import isCNPJ from "./valida-cnpj.js";
-import checkEmail from "./valida-email.js";
+import { verificaCampo, validarFormularioInteiro } from "./valida-campos.js";
+import { abrirCamera, fecharCamera, capturarFoto } from "./camera.js";
 
+const form = document.getElementById("formMessage");
 const camposDoFormulario = document.querySelectorAll('[required]');
+const captureBtn = document.getElementById("captureBtn");
+const cancelBtn = document.getElementById("cancelBtn");
 
-
-function verificaCampo(campo) {
-    if (campo.name == "cnpj") {
-        if (!isCNPJ(campo)) {
-            campo.nextElementSibling.textContent = "Este não é um CNPJ válido!";            
-        } else {
-            campo.nextElementSibling.textContent = null;
-        }
-    }
-    if (campo.name == "email") {
-        if (!checkEmail(campo)) {
-            campo.nextElementSibling.textContent = "Este não é um email válido!";            
-        } else {
-            campo.nextElementSibling.textContent = null;
-        }
-    }
-    if (["nome", "assunto", "mensagem"].includes(campo.name)) {
-        console.log("hguydagl")
-        if (campo.value.length < 3) {
-            campo.nextElementSibling.textContent = "O texto deve possuir pelo menos três caracteres!";            
-        } else {
-            campo.nextElementSibling.textContent = null;
-        }
-    }    
-}
+let fotoBase64 = null;
 
 camposDoFormulario.forEach((campo) => {
     campo.addEventListener("blur", () => verificaCampo(campo));
     campo.addEventListener("invalid", evento => evento.preventDefault());
-})
+});
 
+cancelBtn.addEventListener("click", fecharCamera);
 
-let mensagem = '';
+captureBtn.addEventListener("click", () => {
+    fotoBase64 = capturarFoto();
+    fecharCamera();
+    enviarFormulario();
+});
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!validarFormularioInteiro(camposDoFormulario)) {
+        alert("Preencha corretamente os campos!");
+        return;
+    }
+
+    await abrirCamera();
+});
+
+function enviarFormulario() {
+    const dados = {
+        nome: form.nome.value,
+        cnpj: form.cnpj.value,
+        email: form.email.value,
+        assunto: form.assunto.value,
+        mensagem: form.mensagem.value,
+        foto: fotoBase64
+    };
+
+    setTimeout(() => {
+        alert("Mensagem enviada com sucesso!");
+        form.reset();
+        fotoBase64 = null;
+    }, 1000);
+}
