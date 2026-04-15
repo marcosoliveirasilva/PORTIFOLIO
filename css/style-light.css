@@ -1,0 +1,81 @@
+/* ── Tema Claro ────────────────────────── */
+[data-theme="light"] {
+  --dark:      #ffffff;
+  --dark-2:    #f0f4ff;
+  --mid:       #dce6f5;
+  /* --white:     #1a1a2e; */
+  --off-white: #f0f0f5;
+  --grey:      #4b5563;
+  --grey-light:#9ca3af;
+  --text:      #1a1a2e;
+}
+
+/* -- Navbar -───────────────────────────── */
+[data-theme="light"] .navbar a {
+  color: rgba(0,0,0,.8);
+  border-color: rgba(0,0,0,.8);
+}
+[data-theme="light"] .navbar a:hover {
+  color: rgba(255,255,255,.8);
+  background-color: rgba(0,0,0,.7);
+  border-color: rgba(0,0,0,.02);
+}
+[data-theme="light"] .navbar__logo { color: rgba(0,0,0,.8); }
+[data-theme="light"] .navbar__links a { color: rgba(0,0,0,.8); }
+
+/*-- Home -───────────────────────────── */
+[data-theme="light"] .home {
+  background: linear-gradient(135deg, #e8f0fe 0%, #d0e8ff 50%, #c8f0ed 100%);
+}
+[data-theme="light"] .home__name,
+[data-theme="light"] .home__greeting { color: #1a1a2e; }
+[data-theme="light"] .home__desc    { color: rgba(26,26,46,0.65); }
+
+/* -- About -───────────────────────────── */
+[data-theme="light"] .section__title           { color: #1a1a2e; }
+[data-theme="light"] .section__title--light    { color: #1a1a2e; }
+[data-theme="light"] .section__subtitle--light { color: rgba(26,26,46,0.55); }
+
+/* -- Skills -───────────────────────────── */
+[data-theme="light"] .skills {
+  background: linear-gradient(135deg, #e8f0fe 0%, #d0e8ff 50%, #c8f0ed 100%);
+}
+[data-theme="light"] .skill-item__header      { color: rgba(26,26,46,0.85); }
+[data-theme="light"] .skill-bar               { background: rgba(26,26,46,0.1); }
+
+/* -- Seção Portfolio ────────────────────────────── */
+[data-theme="light"] .portfolio {
+  background: linear-gradient(135deg, #e8f0fe 0%, #d0e8ff 50%, #c8f0ed 100%);
+}
+[data-theme="light"] .portfolio-card          { background: rgba(225, 240, 237, 0.8); border-color: rgba(26,26,46,0.12); }
+[data-theme="light"] .portfolio-card h4       { color: #1a1a2e; }
+[data-theme="light"] .portfolio-card p        { color: #4b5563; }
+
+/* -- Testimonials ────────────────────────────── */
+[data-theme="light"] .testimonials .testimonial-card h4 { color: rgba(26,26,46,0.85); }
+
+/* ── Seção Fale Comigo ────────────────────────────── */
+[data-theme="light"] .contact {
+  background: linear-gradient(135deg, #e8f0fe 0%, #d0e8ff 50%, #c8f0ed 100%);
+}
+
+[data-theme="light"] .contact__list li        { color: rgba(26,26,46,0.75); }
+[data-theme="light"] .contact__form-wrap      { background: rgba(225,240,237,0.8); border-color: rgba(26,26,46,0.12); }
+[data-theme="light"] .contact__form-wrap h3   { color: #1a1a2e; }
+
+[data-theme="light"] .form-field              { background: rgba(230, 240, 237, 0.9); border-color: rgba(26,26,46,0.18); color: #1a1a2e; }
+[data-theme="light"] .form-field::placeholder { color: rgba(26,26,46,0.4); }
+[data-theme="light"] .form-field:focus {
+  border-color: var(--teal);
+  background: rgba(46,200,184,0.12);
+}
+
+/* -- Footer ────────────────────────────── */
+[data-theme="light"] .footer   { background: #f0f0f5; border-color: rgba(26,26,46,0.08); }
+[data-theme="light"] .footer .footer__social img {
+  filter: grayscale(100%) brightness(0) invert(50%); 
+}
+[data-theme="light"] .footer__social img:hover {
+  filter: invert(42%) sepia(85%) saturate(400%) hue-rotate(130deg);
+}
+[data-theme="light"] .footer p { color: rgba(26,26,46,0.5); }
