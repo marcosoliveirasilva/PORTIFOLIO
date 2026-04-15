@@ -151,6 +151,19 @@ ul { list-style: none; }
 }
 .navbar__links a:hover { color: var(--teal); }
 
+.theme-toggle {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50px;
+  padding: .4rem .8rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color var(--transition);
+  margin-left: 1rem;
+}
+.theme-toggle:hover { border-color: var(--teal); }
+
 /* ── Home ─────────────────────────────────────── */
 .home {
   min-height: 100vh;
@@ -251,7 +264,7 @@ ul { list-style: none; }
 .about__list li:last-child { border-bottom: none; }
 .about__list li span {
   font-weight: 700;
-  color: var(--dark);
+  color: #1a1a2e ;
   min-width: 90px;
 }
 
@@ -551,3 +564,7 @@ textarea.form-field { resize: vertical; }
   font-size: .82rem;
 }
 .footer p strong { color: var(--teal); }
+
+.footer__social img:hover {
+  filter: invert(42%) sepia(85%) saturate(400%) hue-rotate(130deg);
+}
